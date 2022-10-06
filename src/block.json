@@ -1,0 +1,25 @@
+{
+    "name": "acf/accordion",
+    "title": "Accordion",
+    "description": "An accordion block with collapsible sections.",
+    "style": "file:./accordion.css",
+    "script": "file:./accordion.js",
+    "category": "acf-blocks",
+    "icon": "menu-alt3",
+    "supports": {
+        "color": {
+            "text": true,
+            "background": false
+        }
+    },
+    "keywords": [
+        "accordion",
+        "toggle",
+        "expand"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "accordion.php",
+        "blockVersion": 2
+    }
+}
