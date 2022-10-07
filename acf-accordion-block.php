@@ -72,3 +72,20 @@ function acf_accordion_block_block_categories( $block_categories ) {
 	return $block_categories;
 }
 add_filter( 'block_categories_all', 'acf_accordion_block_block_categories' );
+
+/**
+ * Register a custom TinyMCE toolbar for ACF.
+ * 
+ * @link https://www.advancedcustomfields.com/resources/customize-the-wysiwyg-toolbars/
+ *
+ * @param array $toolbars Existing toolbars.
+ * @return array $toolbars New toolbars.
+ */
+function acf_accordion_block_tinymce_toolbars( $toolbars ) {
+	// Add a new custom TinyMCE toolbar called "Accordion"
+	$toolbars['Accordion']    = array();
+	$toolbars['Accordion'][1] = array('bold' , 'italic' , 'underline', 'link');
+
+	return $toolbars;
+}
+add_filter( 'acf/fields/wysiwyg/toolbars' , 'acf_accordion_block_tinymce_toolbars' );

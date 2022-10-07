@@ -59,8 +59,8 @@
                     "default_value": "",
                     "delay": 1,
                     "tabs": "all",
-                    "toolbar": "full",
-                    "media_upload": 1,
+                    "toolbar": "accordion",
+                    "media_upload": 0,
                     "parent_repeater": "field_632ddf04b0ad6"
                 }
             ]
