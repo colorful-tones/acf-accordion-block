@@ -10,7 +10,8 @@
         "color": {
             "text": true,
             "background": false
-        }
+        },
+        "mode": false
     },
     "keywords": [
         "accordion",

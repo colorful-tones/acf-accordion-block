@@ -1,8 +1,5 @@
 /*
- *   This content is licensed according to the W3C Software License at
- *   https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
- *
- *   Simple accordion pattern example
+ * Accordion styling and state.
  */
 import './accordion.scss';
 
@@ -25,16 +22,17 @@ class Accordion {
 	}
 
 	toggle(open) {
-	// Don't do anything if the open state doesn't change.
-	if (open === this.open) {
-		return;
-	}
+		// Don't do anything if the open state doesn't change.
+		if (open === this.open) {
+			return;
+		}
 
-	// Update the internal state.
-	this.open = open;
+		// Update the internal state.
+		this.open = open;
 
-	// Handle DOM updates.
-	this.buttonEl.setAttribute('aria-expanded', `${open}`);
+		// Handle DOM updates.
+		this.buttonEl.setAttribute('aria-expanded', `${open}`);
+
 		if (open) {
 			this.contentEl.removeAttribute('hidden');
 		} else {
@@ -52,11 +50,20 @@ class Accordion {
 	}
 }
 
-// Initialize accordions.
-document.addEventListener('DOMContentLoaded', () => {
+function initAccordion() {
 	const accordions = document.querySelectorAll('.accordion h3');
 
 	accordions.forEach((accordionEl) => {
 		new Accordion(accordionEl);
 	});
+}
+
+// Initialize accordions.
+document.addEventListener('DOMContentLoaded', () => {
+	// Init ACF's preview.
+	if (window.acf) {
+		window.acf.addAction('render_block_preview/type=accordion', initAccordion )
+	} else {
+		initAccordion();
+	}
 });

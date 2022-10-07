@@ -88,3 +88,10 @@ html {
 	margin: 0;
 	padding: 1em 1.5em;
 }
+
+/* Make the editor sidebar a wee bit bigger */
+@media (min-width: 960px) {
+	.interface-complementary-area {
+		width: 440px !important;
+	}
+}
