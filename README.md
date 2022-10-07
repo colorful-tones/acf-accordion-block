@@ -10,4 +10,5 @@ An accordion block that uses ACF fields.
 4. Activate ACF Accordion Block.
 5. Create a new page, post and add the Accordion block.
 
+Demonstration of Accordion block with the upcoming Twenty Twenty-Three theme.
 ![Gif demonstrating accordion block use](docs/images/accordion-demo.gif)
