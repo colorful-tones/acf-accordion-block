@@ -1,69 +1,69 @@
 {
-    "key": "group_accordion_block",
-    "title": "Block: Accordion",
-    "fields": [
-        {
-            "key": "field_632ddf04b0ad6",
-            "label": "Accordion Item",
-            "name": "accordion_item",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "pagination": 0,
-            "min": 0,
-            "max": 0,
-            "collapsed": "field_632ddf29b0ad7",
-            "button_label": "Add Accordion Item",
-            "rows_per_page": 20,
-            "sub_fields": [
-                {
-                    "key": "field_632ddf29b0ad7",
-                    "label": "Accordion heading",
-                    "name": "accordion_heading",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_632ddf04b0ad6"
-                },
-                {
-                    "key": "field_632ddf37b0ad8",
-                    "label": "Accordion content",
-                    "name": "accordion_content",
-                    "type": "wysiwyg",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "delay": 0,
-                    "tabs": "visual",
-                    "toolbar": "accordion",
-                    "media_upload": 0,
-                    "parent_repeater": "field_632ddf04b0ad6"
-                }
-            ]
-        }
-    ]
+	"key": "group_accordion_block",
+	"title": "Block: Accordion",
+	"fields": [
+		{
+			"key": "field_632ddf04b0ad6",
+			"label": "Accordion Item",
+			"name": "accordion_item",
+			"type": "repeater",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"layout": "block",
+			"pagination": 0,
+			"min": 0,
+			"max": 0,
+			"collapsed": "field_632ddf29b0ad7",
+			"button_label": "Add Accordion Item",
+			"rows_per_page": 20,
+			"sub_fields": [
+				{
+					"key": "field_632ddf29b0ad7",
+					"label": "Accordion heading",
+					"name": "accordion_heading",
+					"type": "text",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"maxlength": "",
+					"placeholder": "",
+					"prepend": "",
+					"append": "",
+					"parent_repeater": "field_632ddf04b0ad6"
+				},
+				{
+					"key": "field_632ddf37b0ad8",
+					"label": "Accordion content",
+					"name": "accordion_content",
+					"type": "wysiwyg",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"delay": 0,
+					"tabs": "visual",
+					"toolbar": "accordion",
+					"media_upload": 0,
+					"parent_repeater": "field_632ddf04b0ad6"
+				}
+			]
+		}
+	]
 }

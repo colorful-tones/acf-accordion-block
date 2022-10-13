@@ -1,11 +1,12 @@
 {
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
   "name": "acf/accordion",
+  "version": "1.0.2",
   "title": "Accordion",
-  "description": "An accordion block with collapsible sections.",
-  "style": "file:./accordion.css",
-  "script": "file:./accordion.js",
   "category": "acf-blocks",
   "icon": "menu-alt3",
+  "description": "An accordion block with collapsible sections.",
   "supports": {
     "color": {
       "text": true,
@@ -18,9 +19,10 @@
     "toggle",
     "expand"
   ],
+  "script": "file:./accordion.js",
+  "style": "file:./accordion.css",
   "acf": {
     "mode": "preview",
-    "renderTemplate": "accordion.php",
-    "blockVersion": 2
+    "renderTemplate": "accordion.php"
   }
 }

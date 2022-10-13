@@ -1,6 +1,14 @@
 # Accordion block using ACF fields
 
-An accordion block that uses ACF fields.
+An accessible accordion block that uses ACF fields. The interactivity of the accordion comes from [10up's Component Library](https://baseline.10up.com/component/accordion/).
+
+## Accessibility (a11y)
+
+ARIA is added with JavaScript. The recommended markup allows for avoiding keyboard trap, which can often trip of keyboard navigation and other input devices.
+
+If JavaScript is enabled then the accordion items are all expanded and accessible by default.
+
+Also, there are several handy key binding to enable easier navigation, e.g. `home`, `end`, `up` and `down` arrow.
 
 ## How to use?
 
