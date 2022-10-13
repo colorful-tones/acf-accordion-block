@@ -5,3 +5,4 @@
 package.json export-ignore
 package-lock.json export-ignore
 README.md export-ignore
+.editorconfig export-ignore

@@ -1,23 +1,23 @@
 {
-  "name": "acf-accordion-block",
-  "version": "1.0.1",
-  "description": "An accordion block with ACF fields",
-  "scripts": {
-	"build": "wp-scripts build --webpack-copy-php",
-	"format": "wp-scripts format",
-	"lint:css": "wp-scripts lint-style",
-	"lint:js": "wp-scripts lint-js",
-	"packages-update": "wp-scripts packages-update",
-	"plugin-zip": "wp-scripts plugin-zip",
-	"start": "wp-scripts start --webpack-copy-php"
-  },
-  "keywords": [
-    "acf",
-    "wordpress"
-  ],
-  "author": "Damon Cook",
-  "license": "GPL-2.0-or-later",
-  "devDependencies": {
-    "@wordpress/scripts": "^24.3.0"
-  }
+	"name": "acf-accordion-block",
+	"version": "1.0.2",
+	"description": "An accordion block with ACF fields.",
+	"author": "The WordPress Contributors",
+	"license": "GPL-2.0-or-later",
+	"main": "build/index.js",
+	"scripts": {
+		"build": "wp-scripts build --webpack-copy-php",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start --webpack-copy-php"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^24.3.0"
+	},
+	"dependencies": {
+		"@10up/component-accordion": "^2.0.1"
+	}
 }
