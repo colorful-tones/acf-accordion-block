@@ -3,12 +3,6 @@
  * Accordion block.
  */
 
-/**
- * This index is key to keeping things accessible,
- * and having unique Aria assignments.
- */
-$i                  = 0;
-$a11y_id            = substr( $block['id'], -6 );
 $wrapper_attributes = get_block_wrapper_attributes(
 	[
 		'class' => 'accordion'
@@ -16,37 +10,29 @@ $wrapper_attributes = get_block_wrapper_attributes(
 );
 ?>
 
-<div id="<?php echo $block['id']; ?>" <?php echo $wrapper_attributes; ?>>
-	<?php 
+<div <?php echo $wrapper_attributes; ?>>
+	<?php if ( empty( get_field( 'accordion_item' ) ) ) : ?>
+		<p class="acf-accordion-block-empty-state"><?php esc_html_e( 'Please add some content in the sidebar.', 'acf-accordion-block' ); ?> →</p>
+	<?php endif; ?>
+
+	<?php
 	foreach ( get_field( 'accordion_item' ) as $accordion_item ) :
 		$heading = $accordion_item['accordion_heading'] ? $accordion_item['accordion_heading'] : 'Your heading goes here';
 		$content = $accordion_item['accordion_content'] ? $accordion_item['accordion_content'] : 'Your content goes here...';
 		?>
-		<h3 class="accordion-heading">
-			<button type="button"
-					aria-expanded="<?php echo ( $i === 0 ) ? 'true' : 'false'; ?>"
-					class="accordion-trigger"
-					aria-controls="accordion-section-<?php echo $i . '-' . $a11y_id; ?>"
-					id="accordion-<?php echo $i . '-' . $a11y_id; ?>">
-				<span class="accordion-title">
-					<?php echo esc_html( $heading ); ?>
-					<span class="accordion-icon"></span>
-				</span>
-			</button>
-		</h3><!-- .accordion-heading -->
+		<button class="accordion-header" type="button">
+			<span class="accordion-title">
+				<?php echo esc_html( $heading ); ?>
+				<span class="accordion-icon"></span>
+			</span>
+		</button>
 
-		<div id="accordion-section-<?php echo $i . '-' . $a11y_id; ?>"
-			role="region"
-			aria-labelledby="accordion-<?php echo $i . '-' . $a11y_id; ?>"
-			class="accordion-panel"
-			<?php echo ( $i !== 0 ) ? 'hidden' : ''; ?>>
-			<div class="accordion-content">
-				<?php echo $content; ?>
-			</div><!-- .accordion-content -->
-		</div><!-- .accordion-section-<?php echo $i . '-' . $a11y_id; ?> -->
+		<div class="accordion-content">
+			<h2 class="accordion-label"><?php echo esc_html( $heading ); ?></h2>
+			<?php echo $content; ?>
+		</div><!-- .accordion-content -->
 
 		<?php
-		$i++;
 		endforeach;
 	?>
 </div><!-- .accordion -->
