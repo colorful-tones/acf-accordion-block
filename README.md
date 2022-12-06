@@ -1,6 +1,6 @@
-# Accordion block using ACF fields
+# Accordion block using ACF PRO fields
 
-An accessible accordion block that uses ACF fields. The interactivity of the accordion comes from [10up's Component Library](https://baseline.10up.com/component/accordion/).
+An accessible accordion block that uses ACF PRO fields. The interactivity of the accordion comes from [10up's Component Library](https://baseline.10up.com/component/accordion/).
 
 ## Accessibility (a11y)
 
